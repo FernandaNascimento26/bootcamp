@@ -1,0 +1,25 @@
+### GET
+GET http://localhost:3000/admin
+###
+
+### GET c/ parâmetro
+GET http://localhost:3000/admin/28
+###
+
+### POST
+POST http://localhost:3000/admin
+Content-Type: application/json
+
+{
+    "login": "nascimentofernandaf@outlook.com",
+    "senha": "12345678"
+}
+###
+
+### PATCH
+PATCH  http://localhost:3000/admin/28
+###
+
+### DELETE
+DELETE   http://localhost:3000/admin/28
+###
