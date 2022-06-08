@@ -4,6 +4,9 @@ const adminRoutes =  require('./routes/admin');
 const cookieParser = require('cookie-parser');
 const { set } = require('express/lib/response');
 
+//Para utilizar arquivos estáticos
+app.use(express.static('public'));
+
 app.use(cookieParser());
 
 app.use(express.json());
