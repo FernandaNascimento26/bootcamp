@@ -1,7 +1,14 @@
 const express = require('express');
 const admin = express.Router();
 
-admin.get('/', (req, res)=>{
+
+function logReq(req, res, next){
+  console.log('Executando a função Middleware para a rota de usuários');
+
+  return next();
+};
+
+admin.get('/', logReq, (req, res)=>{
     res.send('Testando outra rota')
   })
   
