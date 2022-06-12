@@ -4,6 +4,8 @@ const adminRoutes =  require('./routes/admin');
 const cookieParser = require('cookie-parser');
 const { set } = require('express/lib/response');
 
+
+
 //Para utilizar arquivos estáticos
 app.use(express.static('public'));
 
@@ -36,7 +38,9 @@ app.get('/getcookie',(req, res)=>{
 });
 
 app.get('/', (req, res)=>{
-  res.send('Teste')
+  res.statusCode = 200;
+  res.send('Hello world')
+  
 });
 
 
@@ -58,7 +62,7 @@ app.use((err, req, res, next)=>{
 });
 
 
-app.listen(3000, ()=>{
+app.listen(3002, ()=>{
 
 console.log('Server running!!')
 
